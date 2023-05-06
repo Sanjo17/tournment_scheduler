@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tournment_scheduler/Screens/screen_selectsport.dart';
+import 'package:tournment_scheduler/Screens/selectsport.dart';
 
 // ignore: camel_case_types
 class Screen_Splash extends StatefulWidget {
@@ -11,11 +11,11 @@ class Screen_Splash extends StatefulWidget {
 
 class _Screen_SplashState extends State<Screen_Splash> {
   @override
-
   void initState() {
     delay();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,22 +29,19 @@ class _Screen_SplashState extends State<Screen_Splash> {
               image: DecorationImage(
                   image: AssetImage("assets/images/SPLASH1.png"),
                   fit: BoxFit.cover),
-                  
             ),
-          
           ),
-          
-        
         ),
       ),
     );
   }
 
-  Future delay() async{
+  Future delay() async {
     await Future.delayed(const Duration(seconds: 3));
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (ctx) => Screen_Selectsport(),),);
-
+        builder: (ctx) => Screen_Selectsport(),
+      ),
+    );
   }
 }

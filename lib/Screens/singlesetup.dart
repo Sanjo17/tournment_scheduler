@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Screen_chose extends StatelessWidget {
-  const Screen_chose({super.key});
+class Screen_singlesetup extends StatelessWidget {
+  const Screen_singlesetup({super.key});
 
   @override
   Widget build(BuildContext context) {
