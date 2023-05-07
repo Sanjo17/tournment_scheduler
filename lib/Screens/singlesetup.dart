@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: camel_case_types
 class Screen_singlesetup extends StatelessWidget {
   const Screen_singlesetup({super.key});
 
