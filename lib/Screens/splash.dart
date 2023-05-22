@@ -37,7 +37,7 @@ class _Screen_SplashState extends State<Screen_Splash> {
   }
 
   Future delay() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 10));
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (ctx) => Screen_Selectsport(),
