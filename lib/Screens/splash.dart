@@ -23,7 +23,7 @@ class _Screen_SplashState extends State<Screen_Splash> {
         child: Scaffold(
           //backgroundColor: Colors.orange,
           body: Container(
-            height: 720,
+            height: double.infinity,
             width: double.infinity,
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -37,10 +37,10 @@ class _Screen_SplashState extends State<Screen_Splash> {
   }
 
   Future delay() async {
-    await Future.delayed(const Duration(seconds: 10));
+    await Future.delayed(const Duration(seconds: 3));
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (ctx) => Screen_Selectsport(),
+        builder: (ctx) => const Screen_Selectsport(),
       ),
     );
   }

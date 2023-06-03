@@ -25,13 +25,14 @@ class Screen_singlesetup extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "Single elimination set up",
+                  "ADD TEAMS",
                   style: GoogleFonts.actor(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.normal,
                   ),
                 )
+                
               ],
             ),
           ),

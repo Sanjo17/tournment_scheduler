@@ -1,30 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tournment_scheduler/Screens/chosemode.dart';
+import 'package:tournment_scheduler/widgets/appbar.dart';
+import 'package:tournment_scheduler/widgets/bottomnav.dart';
 
 // ignore: camel_case_types
-class Screen_Selectsport extends StatelessWidget {
+class Screen_Selectsport extends StatefulWidget {
   const Screen_Selectsport({super.key});
 
   @override
+  State<Screen_Selectsport> createState() => _Screen_SelectsportState();
+}
+
+// ignore: camel_case_types
+class _Screen_SelectsportState extends State<Screen_Selectsport> {
+  final int _currentindex = 0;
+
+  // ignore: prefer_typing_uninitialized_variables
+  int? newIndex;
+
+  // ignore: non_constant_identifier_names
+  BotNavOnTap(newIndex) {
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text(
-              "Tourment app",
-              style: GoogleFonts.abel(
-                fontWeight: FontWeight.bold,
-                fontSize: 35,
-              ),
-            ),
-          ),
-        ),
-        body: Column(
+    return Scaffold(
+      bottomNavigationBar: BottomNav(
+          currentIndex: _currentindex,
+          text1: "home",
+          text2: "Tournement",
+          text3: "profile",
+          onTap: BotNavOnTap(newIndex)),
+      appBar: const MyAppNav(
+        title: "Tournement App",
+      ),
+      body: SafeArea(
+        child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Text(
                 "SELECT SPORT",
                 style: GoogleFonts.actor(
@@ -43,8 +59,8 @@ class Screen_Selectsport extends StatelessWidget {
               ),
             ),
             Container(
-              padding:
-                  const EdgeInsets.only(right: 161, left: 161, top: 8, bottom: 8),
+              padding: const EdgeInsets.only(
+                  right: 161, left: 161, top: 8, bottom: 8),
               color: Colors.orangeAccent,
               child: ElevatedButton(
                 onPressed: () {
@@ -62,7 +78,7 @@ class Screen_Selectsport extends StatelessWidget {
   gotochose(context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => Screen_chosemode(),
+        builder: (ctx) => const Screen_chosemode(),
       ),
     );
   }
