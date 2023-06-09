@@ -1,6 +1,7 @@
-import 'package:hive/hive.dart';
 
-part "tournament_model.g.dart";
+
+import 'package:hive_flutter/hive_flutter.dart';
+
 
 @HiveType(typeId: 0)
 class TournamentModel extends HiveObject {
