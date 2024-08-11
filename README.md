@@ -25,7 +25,7 @@ To run the Tournament Scheduler App locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/tournament-scheduler-app.git
+   git clone https://github.com/yourusername/tournament_scheduler.git
    cd tournament-scheduler-app
    ```
 
